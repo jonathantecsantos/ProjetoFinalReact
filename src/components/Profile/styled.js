@@ -4,10 +4,9 @@ import styled from "styled-components";
 export const WrapperContext = styled.div`
     display: flex;
     align-items: flex-start;
-    border-style: solid;
     border-width: 1px;
     border-radius: 16px;
-    border-color:green;
+    border: 1px solid #ccc;
     
 `;
 
