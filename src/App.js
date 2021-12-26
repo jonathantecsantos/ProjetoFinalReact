@@ -8,12 +8,13 @@ import { ResetCSS } from "./global/resetCSS";
 const App = () => {
   return (
     <main>
-      <GithubProvider/>
+      <GithubProvider>
         <ResetCSS/>
-      <Layout>
-        <Profile/>
-        <Repositories/>
-      </Layout>
+        <Layout>
+          <Profile/>
+          <Repositories/>
+        </Layout>
+      </GithubProvider>
     </main>
   );
 }

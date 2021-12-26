@@ -1,7 +1,4 @@
-import { getDefaultNormalizer } from '@testing-library/dom';
 import React from 'react';
-
-// import { Container } from './styles';
 
 const RepositoryItem = ({name, linkToRepo, fullName}) => {
   return <div>
