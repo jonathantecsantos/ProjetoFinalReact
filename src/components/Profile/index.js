@@ -20,6 +20,24 @@ const Profile = () => {
                         rel="noreferrer">
                             {githubState.user.login}
                         </a>
+                    </S.WrapperUserName>
+                    <S.WrapperUserName>
+                        <h5>Company: </h5>
+                        <span>
+                            {githubState.user.company}
+                        </span>        
+                    </S.WrapperUserName>
+                    <S.WrapperUserName>
+                        <h5>Location: </h5>
+                        <span>
+                            {githubState.user.location}
+                        </span>        
+                    </S.WrapperUserName>
+                    <S.WrapperUserName>
+                        <h5>Blog: </h5>
+                        <span>
+                            {githubState.user.blog}
+                        </span>        
                     </S.WrapperUserName> 
                 </div>
                 

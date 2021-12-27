@@ -1,5 +1,6 @@
 import React, {createContext, useState, useCallback} from 'react';
-import api from '../../services/api';
+import api from "../../services/api";
+
 
 
 export const GithubContext = createContext({
@@ -29,24 +30,24 @@ const GithubProvider = ({children}) => {
         });
 
         const getUser = (username) => {
-            api.get(`users/${username}`).then(({data: {user} }) => {
-              setGithubState(prevState => ({
+            api.get(`users/${username}`).then(({ data }) => {
+              setGithubState((prevState) => ({
                 ...prevState,
                 user: {
-                  login: user.login,
-                  name: user.name,
-                  htmlUrl: user.htmlUrl,
-                  blog: user.blog,
-                  company: user.company,
-                  location: user.location,
-                  followers: user.followers,
-                  following: user.following,
-                  public_gists: user.public_gists,
-                  public_repos: user.public_repos,
+                  login: data.login,
+                  name: data.name,
+                  htmlUrl: data.htmlUrl,
+                  blog: data.blog,
+                  company: data.company,
+                  location: data.location,
+                  followers: data.followers,
+                  following: data.following,
+                  public_gists: data.public_gists,
+                  public_repos: data.public_repos,
               },
               }));
-            });
-        };
+            
+        });
         
         const contextValue = { 
           githubState,
@@ -56,6 +57,7 @@ const GithubProvider = ({children}) => {
   return <GithubContext.Provider value={contextValue}>
     {children}
   </GithubContext.Provider>;
+}
 }
 
 export default GithubProvider;
