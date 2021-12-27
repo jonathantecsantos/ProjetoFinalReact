@@ -31,7 +31,7 @@ const Profile = () => {
         
                     <div>
                         <h5>Followins</h5>
-                        <span>{githubState.user.Followins}</span>
+                        <span>{githubState.user.following}</span>
                     </div>
 
                     <div>
