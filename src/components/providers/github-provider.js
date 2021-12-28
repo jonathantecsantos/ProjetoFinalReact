@@ -48,6 +48,7 @@ const GithubProvider = ({children}) => {
               }));
             
         });
+      }
         
         const contextValue = { 
           githubState,
@@ -58,6 +59,4 @@ const GithubProvider = ({children}) => {
     {children}
   </GithubContext.Provider>;
 }
-}
-
 export default GithubProvider;
