@@ -15,6 +15,7 @@ export const GithubContext = createContext({
           loading:false,
           hasUser: false,
           user: {
+                id: undefined,
                 avatar: undefined,
                 login: undefined,
                 name: undefined,
@@ -67,6 +68,7 @@ export const GithubContext = createContext({
 
   const getUserRepos = (username) => {
     api.get(`users/${username}/repos`).then(({ data }) => {
+      console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         repositories: data,

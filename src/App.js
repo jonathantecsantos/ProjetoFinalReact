@@ -10,7 +10,8 @@ const App = () => {
 
   return (
         <Layout>
-          {githubState.hasUser ? <>
+          {githubState.hasUser ? 
+            <>
             {githubState.loading ? (
                 <p>Loadign</p>
                ) : (
@@ -20,9 +21,10 @@ const App = () => {
                   </>
                )}
           
-          </> : <NoSearch/>}
-          
-              
+          </> : (
+          <NoSearch/>
+          )}
+ 
         </Layout>
   );
 };

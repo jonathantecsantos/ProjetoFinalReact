@@ -15,7 +15,7 @@ const Profile = () => {
                     <S.WrapperUserName>
                         <h5>Username: </h5>
                         <a 
-                        href={githubState.user.htmlUrl}
+                        href={githubState.user.html_Url}
                         target="_blank" 
                         rel="noreferrer">
                             {githubState.user.login}
@@ -34,10 +34,10 @@ const Profile = () => {
                         </span>        
                     </S.WrapperUserName>
                     <S.WrapperUserName>
-                        <h5>Blog: </h5>
-                        <span>
+                        <h5>Blog: </h5>          
+                        <a href={githubState.user.blog} target="_blank" rel="noreferrer">
                             {githubState.user.blog}
-                        </span>        
+                        </a>  
                     </S.WrapperUserName> 
                 </div>
                 

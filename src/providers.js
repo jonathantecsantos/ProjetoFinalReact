@@ -15,4 +15,4 @@ const Providers = () => {
     );
 };
 
-export default Providers
+export default Providers;

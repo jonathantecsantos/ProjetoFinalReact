@@ -3,23 +3,28 @@ import * as S from './styled';
 import useGithub from "../../hooks/github-hooks";
 
 const Header = () => {
-
-    const {getUser} = useGithub();
-    const [usernameForSeach, setUsernameForSeach] = useState();
-    const submitGetUser = () =>{
-        if(!usernameForSeach) return;
-        return getUser(usernameForSeach);
-    }
-    return <header>
+    const { getUser } = useGithub();
+    const [usernameForSearch, setUsernameForSearch] = useState();
+  
+    const submitGetUser = () => {
+      if (!usernameForSearch) return;
+      return getUser(usernameForSearch);
+    };
+  
+    return (
+      <header>
         <S.Wrapper>
-            <input 
-                type="text" 
-                placeholder="Digite o nome do perfil no Github" 
-                onChange={(event) => setUsernameForSeach(event.target.value)} />
-            <button type="submit" onClick={submitGetUser}><span>Buscar</span></button>
+          <input
+            type="text"
+            placeholder="Digite o username para pesquisa..."
+            onChange={(event) => setUsernameForSearch(event.target.value)}
+          />
+          <button type="submit" onClick={submitGetUser}>
+            <span>Buscar</span>
+          </button>
         </S.Wrapper>
-
-    </header>;   
-}
+      </header>
+    );
+  };
 
 export default Header;
